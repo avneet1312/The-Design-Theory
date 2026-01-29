@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700&family=Cinzel:wght@400;500;600;700&display=swap');
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'EB Garamond', serif; 
+    overflow-x: hidden; 
+    line-height: 1.6;
+}
+
+/* NAVBAR BASE */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding: 1.2rem 5vw;
+    z-index: 1000;
+    border-bottom: 1px solid #eee;
+}
+
+
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 3rem;
+    list-style: none;
+    font-family: 'Century Gothic', 'Montserrat', sans-serif;
+}
+
+.nav-left {
+    justify-self: start;
+}
+
+.nav-right {
+    justify-self: end;
+}
+
+
+
+.nav-left a, .nav-right a { 
+    color: #b6931f;
+    text-decoration: none;
+    font-size: clamp(0.7rem, 1.1vw, 1rem);
+    letter-spacing: clamp(1px, 0.3vw, 2px);
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+
+.nav-left a:hover, .nav-right a:hover { 
+    opacity: 1; 
+    color: #b6931f;
+    letter-spacing: 3px;
+}
+
+.logo {
+    justify-self: center;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-family: 'Cinzel', serif;
+    color: #b6931f;
+}
+
+.logo-img {
+    width: clamp(2.2rem, 4vw, 4.5rem);
+    height: auto;
+    filter: brightness(1.1) sepia(0.2);
+}
+
+.logo-text {
+    font-size: clamp(0.9rem, 1.6vw, 1.4rem);
+    letter-spacing: clamp(0.5px, 0.2vw, 1px);
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/* MOBILE MENU ICON */
+.menu-toggle {
+    display: none;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+    cursor: pointer;
+    color: #b6931f;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+    position: fixed;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 3rem 2rem;
+    z-index: 1001;
+    transition: transform 0.4s ease;
+    transform: translateY(0);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.mobile-menu a {
+    font-family: 'Cinzel', serif;
+    color: #b6931f;
+    text-decoration: none;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+/* ACTIVE STATE */
+.mobile-menu.active {
+    transform: translateY(-100%);
+}
+
+/* HIDE ON DESKTOP */
+@media (min-width: 769px) {
+    .mobile-menu {
+        display: none;
+    }
+}
+
+.menu-overlay {
+    position: fixed;
+    inset: 0;
+    background: transparent;
+    z-index: 1000;
+    display: none;
+}
+.menu-overlay.active {
+    display: block;
+}
+
+
+.hero {
+    min-height: 100svh; /* handles mobile address bar */
+    padding-top: calc(3rem + 5vh);
+    background: linear-gradient(rgba(0,0,0,0.7), #ffffff), url('hero-bg.jpg'); 
+    background-size: cover; 
+    background-position: center;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    color: white; 
+}
+
+
+.hero-content {
+    max-width: 900px;
+    padding: 0 2rem;
+}
+
+.hero h1 { 
+    font-family: 'Cinzel', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem); 
+    margin-bottom: 1.5rem; 
+    letter-spacing: 3px;
+    line-height: 1.2;
+    color: white; 
+}
+
+.hero p {
+    font-size: clamp(1rem, 2.5vw, 1.3rem);
+    margin-bottom: 2.5rem;
+    opacity: 0.95;
+}
+
+.cta { 
+    background: #b6931f; 
+    color: white; 
+    border: none; 
+    padding: 1.2rem 3rem; 
+    font-family: 'EB Garamond', serif;
+    font-size: clamp(1rem, 2.5vw, 1.2rem); 
+    cursor: pointer; 
+    margin-top: 1rem; 
+    letter-spacing: 2px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    border-radius: 50px;
+}
+
+.cta:hover {
+    background: #b6931f;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.4);
+}
+
+* PROJECTS SECTION */
+.projects { padding: 8rem 5% 6rem; max-width: 1400px; margin: 0 auto; text-align: center; background: #fafafa; }
+.projects h2 { font-family: 'Cinzel', serif; font-size: clamp(2rem, 5vw, 3.5rem); color: #333; margin-bottom: 1rem; letter-spacing: 2px; }
+.projects p { font-size: 1.2rem; color: #666; max-width: 600px; margin: 0 auto 4rem; }
+.project-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); 
+    gap: 2.5rem; 
+    margin-top: 3rem; 
+}
+.project-card { 
+    height: 350px; 
+    background: linear-gradient(135deg, #fff 0%, #f8f8f8 100%); 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-size: 1.3rem; 
+    font-family: 'EB Garamond', serif;
+    color: #666;
+    border-radius: 15px; 
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+.project-card:hover { transform: translateY(-10px); box-shadow: 0 25px 60px rgba(0,0,0,0.15); }
+
+/* TESTIMONIALS */
+.testimonials { padding: 8rem 5%; max-width: 1200px; margin: 0 auto; text-align: center; }
+.testimonial-slider { max-width: 700px; margin: 3rem auto; overflow: hidden; position: relative; }
+.testimonial { padding: 3rem 2.5rem; background: white; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border-radius: 20px; font-style: italic; font-size: 1.1rem; color: #555; line-height: 1.7; }
+
+/* AWARDS */
+.awards { padding: 6rem 5%; background: #f5f5f5; text-align: center; }
+.awards h2 { font-family: 'Cinzel', serif; font-size: 2.5rem; margin-bottom: 3rem; color: #333; }
+.awards ul { list-style: none; display: flex; justify-content: center; gap: 3rem; flex-wrap: wrap; }
+.awards li { background: white; padding: 1.5rem 2.5rem; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); font-family: 'EB Garamond', serif; font-size: 1.1rem; font-weight: 500; color: #d4af37; }
+
+/* FOOTER */
+footer { background: #1a1a1a; color: #ccc; text-align: center; padding: 3rem 2rem; font-size: 0.95rem; }
+
+/* =====================
+   MOBILE LAYOUT
+   ===================== */
+@media (max-width: 768px) {
+    .navbar {
+        grid-template-columns: auto 1fr auto;
+    }
+
+    .nav-left,
+    .nav-right {
+        display: none; /* hide links */
+    }
+
+    .logo {
+        justify-content: flex-start;
+    }
+
+    .menu-toggle {
+        display: block;
+        justify-self: end;
+    }
+}
+
+
