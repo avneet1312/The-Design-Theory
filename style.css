@@ -13,11 +13,11 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: #fff;
+    background: #f5efeb;
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    padding: 0.2rem 2vw;
+    padding: 0.2rem 4vw;
     z-index: 1000;
     border-bottom: 1px solid #eee;
 }
@@ -68,7 +68,7 @@ body {
 }
 
 .logo-img {
-    width: clamp(4rem, 6.5vw, 7rem);
+    width: clamp(3.8rem, 6.3vw, 6.5rem);
     height: auto;
     filter: brightness(1.1) sepia(0.2);
 }
@@ -101,7 +101,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 2rem;
-    padding: 3rem 2rem;
+    padding: 1.7rem 1.5rem;
     z-index: 1001;
     transition: transform 0.4s ease;
     transform: translateY(0);
@@ -112,7 +112,7 @@ body {
     font-family: 'Cinzel', serif;
     color: #120939;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     letter-spacing: 2px;
 }
 
@@ -165,7 +165,7 @@ body {
 
 .hero h1 { 
     font-family: 'Cinzel', serif;
-    font-size: clamp(2.5rem, 6vw, 4.5rem); 
+    font-size: clamp(1.5rem, 2vw, 4.5rem); 
     margin-bottom: 1.5rem; 
     letter-spacing: 3px;
     line-height: 1.2;
@@ -182,13 +182,13 @@ body {
     background: #120939; 
     color: white; 
     border: none; 
-    padding: 1.2rem 3rem; 
+    padding: 0.8rem 2.2rem; 
     font-family: 'EB Garamond', serif;
-    font-size: clamp(1rem, 2.5vw, 1.2rem); 
+    font-size: clamp(0.8rem, 2.3vw, 0.9rem); 
     cursor: pointer; 
-    margin-top: 1rem; 
+    margin-top: 0.6rem; 
     letter-spacing: 2px;
-    font-weight: 500;
+    font-weight: 400;
     text-transform: uppercase;
     transition: all 0.3s ease;
     border-radius: 50px;
