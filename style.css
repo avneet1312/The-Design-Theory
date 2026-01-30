@@ -68,7 +68,7 @@ body {
 }
 
 .logo-img {
-    width: clamp(3.8rem, 6.3vw, 6.5rem);
+    width: clamp(3.5rem, 5.8vw, 6.0rem);
     height: auto;
     filter: brightness(1.1) sepia(0.2);
 }
@@ -144,24 +144,81 @@ body {
 }
 
 
+/* =====================
+   HERO VIDEO STYLE SLIDER
+   ===================== */
+
 .hero {
-    min-height: 100svh; /* handles mobile address bar */
-    padding-top: calc(3rem + 5vh);
-    background: linear-gradient(rgba(0,0,0,0.7), #ffffff), url('hero-bg.jpg'); 
-    background-size: cover; 
-    background-position: center;
-    display: flex; 
-    align-items: center; 
-    justify-content: center; 
-    text-align: center; 
-    color: white; 
+    position: relative;
+    min-height: 100svh;
+    padding-top: calc(3rem + 5vh); /* keeps navbar spacing */
+    overflow: hidden;
+    color: white;
 }
 
+/* Slider container */
+.hero-slider {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+}
 
+/* Slides */
+.slide {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    transform: scale(1.08);
+    transition: opacity 1.2s ease-in-out, transform 6s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 2;
+}
+
+/* Images */
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Portrait image combination */
+.slide.split {
+    display: flex;
+}
+
+.slide.split img {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Luxury dark overlay */
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 2;
+}
+
+/* Hero text stays above everything */
 .hero-content {
+    position: relative;
+    z-index: 3;
     max-width: 900px;
     padding: 0 2rem;
+    margin: 0 auto;
+    height: calc(100svh - 5rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
+
 
 .hero h1 { 
     font-family: 'Cinzel', serif;
@@ -178,7 +235,7 @@ body {
     opacity: 0.95;
 }
 
-.cta { 
+.hero-cta { 
     background: #120939; 
     color: white; 
     border: none; 
@@ -192,13 +249,21 @@ body {
     text-transform: uppercase;
     transition: all 0.3s ease;
     border-radius: 50px;
+    position: absolute;
+    z-index: 10;            /* higher than everything */
+    bottom: 24vh;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
 }
 
-.cta:hover {
-    background: #120939;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(10, 2, 53, 0.4);
+.hero-cta.cta {
+    padding: 0.7rem 1.7rem;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
 }
+
+
 
 * PROJECTS SECTION */
 .projects { padding: 8rem 5% 6rem; max-width: 1400px; margin: 0 auto; text-align: center; background: #fafafa; }
@@ -262,4 +327,30 @@ footer { background: #1a1a1a; color: #ccc; text-align: center; padding: 3rem 2re
         display: block;
         justify-self: end;
     }
+    .hero {
+    height: 100vh;
+  }
+
+  .hero-content {
+    padding: 0 1.2rem;
+    text-align: center;
+  }
+
+  .hero-content h1 {
+    font-size: 1.4rem;
+    line-height: 1.3;
+    letter-spacing: 1px;
+  }
+
+  .hero-content p {
+    font-size: 0.8rem;
+    margin-top: 0.6rem;
+  }
+
+  .hero-cta {
+    margin-top: 1rem;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+  }
 }
