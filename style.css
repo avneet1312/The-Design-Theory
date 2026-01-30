@@ -42,7 +42,7 @@ body {
 
 
 .nav-left a, .nav-right a { 
-    color: #120939;
+    color: #0d062a;
     text-decoration: none;
     font-size: clamp(0.7rem, 1.1vw, 1rem);
     letter-spacing: clamp(1px, 0.3vw, 2px);
@@ -54,7 +54,7 @@ body {
 
 .nav-left a:hover, .nav-right a:hover { 
     opacity: 1; 
-    color: #120939;
+    color: #0d062a;
     letter-spacing: 3px;
 }
 
@@ -64,7 +64,7 @@ body {
     align-items: center;
     gap: 0.1rem;
     font-family: 'Cinzel', serif;
-    color: #120939;
+    color: #0d062a;
 }
 
 .logo-img {
@@ -87,7 +87,7 @@ body {
     display: none;
     font-size: clamp(1.5rem, 5vw, 2rem);
     cursor: pointer;
-    color: #120939;
+    color: #0d062a;
 }
 
 /* MOBILE MENU */
@@ -110,7 +110,7 @@ body {
 
 .mobile-menu a {
     font-family: 'Cinzel', serif;
-    color: #120939;
+    color: #0d062a;
     text-decoration: none;
     font-size: 1.0rem;
     letter-spacing: 2px;
@@ -236,7 +236,7 @@ body {
 }
 
 .hero-cta { 
-    background: #120939; 
+    background: #0d062a; 
     color: white; 
     border: none; 
     padding: 0.8rem 2.2rem; 
