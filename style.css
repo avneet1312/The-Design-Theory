@@ -17,7 +17,7 @@ body {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    padding: 0.5rem 2vw;
+    padding: 0.2rem 2vw;
     z-index: 1000;
     border-bottom: 1px solid #eee;
 }
@@ -68,18 +68,19 @@ body {
 }
 
 .logo-img {
-    width: clamp(2.7rem, 4.5vw, 4.9rem);
+    width: clamp(4rem, 6.5vw, 7rem);
     height: auto;
     filter: brightness(1.1) sepia(0.2);
 }
 
 .logo-text {
-    font-size: clamp(0.9rem, 1.6vw, 1.4rem);
-    letter-spacing: clamp(0.5px, 0.2vw, 1px);
+    font-size: clamp(1.2rem, 2.2vw, 2rem);
+    letter-spacing: clamp(1.8px, 1.1vw, 2.2px);
     text-transform: uppercase;
     white-space: nowrap;
     font-weight: 400;
 }
+
 
 /* MOBILE MENU ICON */
 .menu-toggle {
@@ -125,6 +126,10 @@ body {
     .mobile-menu {
         display: none;
     }
+    .logo {
+    justify-content: center;  /* Override flex-start */
+}
+
 }
 
 .menu-overlay {
