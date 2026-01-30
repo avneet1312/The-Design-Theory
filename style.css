@@ -17,7 +17,7 @@ body {
     display: grid;
     grid-template-columns: auto 1fr auto;
     align-items: center;
-    padding: 0.3rem 5vw;
+    padding: 1.2rem 5vw;
     z-index: 1000;
     border-bottom: 1px solid #eee;
 }
@@ -42,7 +42,7 @@ body {
 
 
 .nav-left a, .nav-right a { 
-    color: #0b0847;
+    color: #120939;
     text-decoration: none;
     font-size: clamp(0.7rem, 1.1vw, 1rem);
     letter-spacing: clamp(1px, 0.3vw, 2px);
@@ -54,7 +54,7 @@ body {
 
 .nav-left a:hover, .nav-right a:hover { 
     opacity: 1; 
-    color: #0b0847;
+    color: #120939;
     letter-spacing: 3px;
 }
 
@@ -62,23 +62,23 @@ body {
     justify-self: center;
     display: flex;
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.1rem;
     font-family: 'Cinzel', serif;
-    color: #0b0847;
+    color: #120939;
 }
 
 .logo-img {
-    width: clamp(3.5rem, 5.7vw, 5.9rem);
+    width: clamp(2.4rem, 4.2vw, 4.6rem);
     height: auto;
     filter: brightness(1.1) sepia(0.2);
 }
 
 .logo-text {
-    font-size: clamp(1.1rem, 1.7vw, 1.5rem);
+    font-size: clamp(0.9rem, 1.6vw, 1.4rem);
     letter-spacing: clamp(0.5px, 0.2vw, 1px);
     text-transform: uppercase;
     white-space: nowrap;
-    font-weight: bold;
+    font-weight: 400;
 }
 
 /* MOBILE MENU ICON */
@@ -86,7 +86,7 @@ body {
     display: none;
     font-size: clamp(1.5rem, 5vw, 2rem);
     cursor: pointer;
-    color: #0b0847;
+    color: #120939;
 }
 
 /* MOBILE MENU */
@@ -109,7 +109,7 @@ body {
 
 .mobile-menu a {
     font-family: 'Cinzel', serif;
-    color: #0b0847;
+    color: #120939;
     text-decoration: none;
     font-size: 1.2rem;
     letter-spacing: 2px;
@@ -174,7 +174,7 @@ body {
 }
 
 .cta { 
-    background: #0b0847; 
+    background: #120939; 
     color: white; 
     border: none; 
     padding: 1.2rem 3rem; 
@@ -190,9 +190,9 @@ body {
 }
 
 .cta:hover {
-    background: #0b0847;
+    background: #120939;
     transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(14, 12, 71, 0.4);
+    box-shadow: 0 10px 30px rgba(10, 2, 53, 0.4);
 }
 
 * PROJECTS SECTION */
@@ -250,6 +250,7 @@ footer { background: #1a1a1a; color: #ccc; text-align: center; padding: 3rem 2re
 
     .logo {
         justify-content: flex-start;
+
     }
 
     .menu-toggle {
@@ -257,5 +258,3 @@ footer { background: #1a1a1a; color: #ccc; text-align: center; padding: 3rem 2re
         justify-self: end;
     }
 }
-
-
