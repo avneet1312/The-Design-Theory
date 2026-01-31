@@ -42,7 +42,7 @@ body {
 
 
 .nav-left a, .nav-right a { 
-    color: #0d062a;
+    color: #110837;
     text-decoration: none;
     font-size: clamp(0.7rem, 1.1vw, 1rem);
     letter-spacing: clamp(1px, 0.3vw, 2px);
@@ -54,7 +54,7 @@ body {
 
 .nav-left a:hover, .nav-right a:hover { 
     opacity: 1; 
-    color: #0d062a;
+    color: #110837;
     letter-spacing: 3px;
 }
 
@@ -64,7 +64,7 @@ body {
     align-items: center;
     gap: 0.1rem;
     font-family: 'Cinzel', serif;
-    color: #0d062a;
+    color: #110837;
 }
 
 .logo-img {
@@ -87,7 +87,7 @@ body {
     display: none;
     font-size: clamp(1.5rem, 5vw, 2rem);
     cursor: pointer;
-    color: #0d062a;
+    color: #110837;
 }
 
 /* MOBILE MENU */
@@ -96,7 +96,7 @@ body {
     top: 100%;
     left: 0;
     width: 100%;
-    background: #ffffff;
+    background: #f5efeb;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,7 +110,7 @@ body {
 
 .mobile-menu a {
     font-family: 'Cinzel', serif;
-    color: #0d062a;
+    color: #110837;
     text-decoration: none;
     font-size: 1.0rem;
     letter-spacing: 2px;
@@ -153,7 +153,7 @@ body {
     min-height: 100svh;
     padding-top: calc(3rem + 5vh); /* keeps navbar spacing */
     overflow: hidden;
-    color: white;
+    color: #f5efeb;
 }
 
 /* Slider container */
@@ -198,6 +198,8 @@ body {
 
 
 
+
+
 /* Luxury dark overlay */
 .hero::after {
     content: "";
@@ -228,7 +230,7 @@ body {
     margin-bottom: 1.5rem; 
     letter-spacing: 3px;
     line-height: 1.2;
-    color: white; 
+    color: #f5efeb; 
 }
 
 .hero p {
@@ -239,7 +241,7 @@ body {
 
 .hero-cta { 
     background: #0d062a; 
-    color: white; 
+    color: #f5efeb; 
     border: none; 
     padding: 0.8rem 2.2rem; 
     font-family: 'EB Garamond', serif;
@@ -265,6 +267,151 @@ body {
     letter-spacing: 2px;
 }
 
+/* ===== About Us Section ===== */
+.about-us {
+  background: #f5efeb;
+  padding: clamp(1rem, 2vw, 2rem) 8%;
+  font-family: 'EB Garamond', serif;
+}
+
+.about-container {
+  max-width: 82rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(2.5rem, 2vw, 3rem);
+  align-items: center;
+  margin-bottom: 0;
+}
+
+/* Image */
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+/* Content */
+.about-content h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 400;
+  color: #110837;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.about-content p {
+  font-family: Arial, sans-serif;
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  line-height: 1.8;
+  color: #110837;
+  margin-bottom: 1.5rem;
+}
+
+/* Button */
+.about-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.9rem 2.4rem;
+  border: 1px solid #110837;
+  color: #1b0d57;
+  text-decoration: none;
+  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+  letter-spacing: 0.15em;
+  transition: all 0.3s ease;
+  margin-bottom: 0;
+}
+
+.about-btn:hover {
+  background: #110837;
+  color: #f5efeb;
+}
+
+
+
+
+/* ===== Luxury Intro Section ===== */
+.luxury-intro {
+  background: #f5efeb;
+  padding: clamp(1rem, 2vw, 2rem) 8%;
+  font-family: 'EB Garamond', serif;
+  
+}
+
+
+.luxury-container {
+  max-width: 82rem; /* ~1300px */
+  margin: 0 auto;
+}
+
+.luxury-heading {
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.3;
+  color: #110837;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* Two-column layout */
+/* Three-column luxury layout */
+.luxury-content {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr auto;
+  gap: clamp(2rem, 5vw, 4rem);
+  align-items: center;
+  margin-top: 0;
+}
+
+/* Left title */
+.luxury-left h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-weight: 400;
+  color: #110837;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+/* Middle text */
+.luxury-middle p {
+  font-family: Arial, sans-serif;
+  font-size: clamp(0.95rem, 1.1vw, 1.1rem);
+  line-height: 1.8;
+  color: #110837;
+}
+
+/* Right aligned button */
+.luxury-action {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+/* Button */
+.luxury-btn {
+  display: inline-block;
+  margin-top: 1.2rem;
+  padding: 0.9rem 2.2rem;
+  border: 1px solid #110837;
+  color: #1b0d57;
+  text-decoration: none;
+  font-size: clamp(0.7rem, 0.9vw, 0.85rem);
+  letter-spacing: 0.15em;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.luxury-btn:hover {
+  background: #110837;
+  color: #f5efeb;
+}
+
+/* Responsive Layout Change */
+@media (max-width: 900px) {
+  .luxury-content {
+    grid-template-columns: 1fr;
+  }
+}
 
 
 * PROJECTS SECTION */
@@ -355,5 +502,38 @@ footer { background: #1a1a1a; color: #ccc; text-align: center; padding: 3rem 2re
     font-size: 0.7rem;
     letter-spacing: 1.5px;
     transition: all 0.2s ease;
+  }
+  .luxury-intro {
+  padding: clamp(1rem, 3vw, 3rem) 8%;
+  }
+  .about-us {
+  padding: clamp(1rem, 3vw, 3rem) 8%;
+  }
+
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .about-container {
+    grid-template-columns: 1fr;
+  }
+  .luxury-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .luxury-action {
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+  }
+  .luxury-intro {
+  padding: clamp(1rem, 3vw, 3rem) 8%;
+  }
+  .about-us {
+  padding: clamp(1rem, 3vw, 3rem) 8%;
+  }
+
+  .luxury-heading {
+    margin-bottom: 2.5rem;
   }
 }
