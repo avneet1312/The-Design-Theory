@@ -493,6 +493,129 @@ body {
     transform: translateX(6px);
 }
 
+/* ================= OUR PROCESS ================= */
+
+.process-section {
+  background: #f5efeb;
+  padding: clamp(4rem, 8vw, 7rem) 8%;
+  text-align: center;
+}
+
+.process-title {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  color: #110837;
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}
+
+.process-subtitle {
+  font-family: 'EB Garamond', serif;
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: #110837;
+  opacity: 0.85;
+  margin-bottom: clamp(3rem, 6vw, 5rem);
+}
+
+/* GRID */
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: clamp(2rem, 3vw, 3rem);
+}
+
+/* STEP */
+.process-step {
+  position: relative;
+  padding: 0 1.2rem;
+}
+
+/* vertical divider */
+.process-step:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 12%;
+  right: 0;
+  width: 1px;
+  height: 76%;
+  background: rgba(194, 163, 107, 0.45);
+}
+
+/* NUMBER */
+.step-number {
+  font-family: 'EB Garamond', serif;
+  font-size: 0.85rem;
+  color: #110837;
+  letter-spacing: 1px;
+}
+
+/* HEADING */
+.process-step h3 {
+  font-family: 'Cinzel', serif;
+  font-size: clamp(1rem, 1.1vw, 1.15rem);
+  font-weight: 400;
+  margin: 1rem 0 0.8rem;
+  color: #110837;
+}
+
+/* TEXT */
+.process-step p {
+  font-family: Arial, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #110837;
+  opacity: 0.9;
+}
+
+
+/* ===== PROCESS ICONS ===== */
+
+.process-icon {
+  width: 56px;
+  height: 56px;
+  margin: 0 auto 1.4rem;
+}
+
+.process-icon svg {
+  stroke: #110837; /* brand blue */
+  stroke-width: 1.4;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0.9;
+}
+
+
+/* subtle luxury hover */
+.process-step:hover .process-icon svg {
+  opacity: 1;
+  transform: translateY(-4px);
+  transition: all 0.4s ease;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 1200px) {
+  .process-grid {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 3.5rem;
+  }
+
+  .process-step:nth-child(3)::after {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .process-step::after {
+    display: none;
+  }
+}
+
 
 
 /* TESTIMONIALS */
